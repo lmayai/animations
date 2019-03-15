@@ -9,10 +9,11 @@
             height: 100px;
             border-radius: 50%;
             background: red;
-            transition-property: width,height;
-            transition-duration: 1s;
-            transition-delay: 1s;
-            transition-timing-function: ease;
+            transition-property: width,height; /**a las pros que se aplicaran*/
+            transition-duration: 1s; /*tiempo*/
+            transition-delay: 1s; /*tiempo desde el que se aplica*/
+            transition-timing-function: ease; /**/
+            transition: width 1s 1s ease;  /*EN RESUMIDO*/
         }
 
         .pelota:hover{

@@ -16,6 +16,7 @@
         }
         .container{
             border: 1px solid red;
+            width: 100%;
             
         }
         .container:hover .cuadrado{
@@ -24,6 +25,10 @@
         .cuadrado{
             height: 200px;
             width: 200px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: #7dc900;
             margin: 20px;
             /* transition: .2s;    */
@@ -35,14 +40,14 @@
             /* animation-timing-function: cubic-bezier(); */
             /* animation-direction: alternate; */
             animation-fill-mode: forwards;
-            
+            position: relative;
         }
         @keyframes cuadrado{
             0%{
-                opacity: 1;
+                left: 0;
             }
             100%{
-                opacity: 0;
+                left: calc(100% - 200px -20px);  /*Menos el width y menos el margen*/
             }
         }
     </style>

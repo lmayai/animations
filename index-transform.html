@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>TRansformacion</title>
     <style>
         body{
             display:flex;
@@ -26,7 +26,8 @@
         .container:hover .cuadrado{
             /* transform: rotate(45deg); */
             /* transform: rotate(-45deg); */
-            /* transform: rotateX(45deg); */
+            transform-origin: top;
+            transform: rotateX(45deg);
             /* transform: rotateY(45deg); */
             /* transform: rotateZ(45deg); */
             /* transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg); */
@@ -38,7 +39,8 @@
             /*transform: scale(2);*/ /*El doble de tamaño*/
             /* transform: skew(x,y) en grados */
             /* transform: skew(45deg,45deg); */
-            transform: skew(20deg,20deg);
+            /* transform: skew(20deg,20deg); */
+
         }
         .cuadrado{
             height: 200px;

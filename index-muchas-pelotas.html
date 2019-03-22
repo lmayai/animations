@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animaciones cubic-bezier</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      font-family: Arial;
+    }
+    .container {
+      border: 1px solid red;
+      width: 100%;
+    }
+    .container:hover .cuadrado {
+      animation-play-state: paused;
+    }
+    .cuadrado {
+      width: 150px;
+      height: 50px;
+      background: #7dc900;
+      margin: 20px;
+      /*transition: .3s;*/
+      animation-name: cuadrado;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-duration: 5s;
+      /*animation-delay: 1s;*/
+      /*animation-iteration-count: 2;*/
+      animation-iteration-count: infinite;
+      /*animation-direction: reverse;*/
+      animation-direction: alternate;
+      /*animation-fill-mode: forwards;*/
+      /*animation-play-state: paused /*running;*/
+      position: relative;
+    }
+    .cuadrado.a {animation-timing-function: ease;}
+    .cuadrado.b {animation-timing-function: ease-in;}
+    .cuadrado.c {animation-timing-function: ease-out;}
+    .cuadrado.d {animation-timing-function: ease-in-out;}
+    .cuadrado.e {animation-timing-function: linear;}
+    .cuadrado.f {animation-timing-function: steps(5);}
+    /*animation-timing-function: cubic-bezier(1,1,1,1)*/
+    .cuadrado.g {animation-timing-function: cubic-bezier(.69,-0.26,.31,1.3);}
+    @keyframes cuadrado {
+      0% {
+        /*opacity: 1;*/
+        left: 0;
+      }
+      100% {
+        left: calc(100% - 190px);
+        /*opacity: 0;*/
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cuadrado a">
+      ease
+    </div>
+    <div class="cuadrado b">
+      ease-in
+    </div>
+    <div class="cuadrado c">
+      ease-out
+    </div>
+    <div class="cuadrado d">
+      ease-in-out
+    </div>
+    <div class="cuadrado e">
+      linear
+    </div>
+    <div class="cuadrado f">
+      steps
+    </div>
+    <div class="cuadrado g">
+      cubic-bezier
+    </div>
+  </div>
+</body>
+</html>```

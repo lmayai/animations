@@ -33,25 +33,13 @@
             margin: 20px;
             /* transition: .2s;    */
             animation-name: cuadrado, rebote;
-            animation-duration: 2s,0.2s ;
+            animation-duration: 3s,0.3s ;
             animation-delay: 1s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
             /* animation-fill-mode: forwards; */
             position: relative;
-
-            /* animation-timing-function: cubic-bezier(); */
-            animation-timing-function: ease;
-            /*Ease-in mas lento al incio, se pone mas rápido*/
-            animation-timing-function: ease-in;
-            /*ease in out lento luego rapio y luego lento: un pendulo, lento al extremo*/
             animation-timing-function: ease-in-out;
-            /*eae-out mas rapido y luego lento*/
-            animation-timing-function: ease-out;
-            /*vlocidad contaste*/
-            animation-timing-function: linear;
-            animation-timing-function: steps(5);
-            animation-timing-function: cubic-bezier(.75,-0.31,0.33,1.4);
 
         }
         @keyframes cuadrado{
@@ -67,9 +55,9 @@
                 transform: translateY(0);
             }
             to{ /*Lo mismo que decir 100%*/
-                transform: translateY(100px);
-            }
+                transform: translateY(100px) scale(1, 0.8);
 
+            }
         }
     </style>
 </head>

@@ -32,8 +32,8 @@
             background: #7dc900;
             margin: 20px;
             /* transition: .2s;    */
-            animation-name: cuadrado;
-            animation-duration: 2s;
+            animation-name: cuadrado, rebote;
+            animation-duration: 2s,0.2s ;
             animation-delay: 1s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
@@ -62,10 +62,15 @@
                 left: calc(100% - 200px - 20px);  /*Menos el width y menos el margen*/
             }
         }
-        @keyframes cuadrado{
+        @keyframes rebote{
+            from{ /*Lo mismo que decir desde 0 %*/
+                transform: translateY(0);
+            }
+            to{ /*Lo mismo que decir 100%*/
+                transform: translateY(100px);
+            }
 
         }
-
     </style>
 </head>
 <body>

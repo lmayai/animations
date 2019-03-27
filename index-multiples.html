@@ -42,6 +42,27 @@
             animation-timing-function: ease-in-out;
 
         }
+        .cuadrado p{
+            text-transform: capitalize;
+            animation-name: titulito;
+            animation-direction: alternate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes titulito{
+            from{
+                transform: rotate(0deg) scale(1,1) ;
+                color: rgba(0, 0, 0, 0.6);
+                font-size: 10px;
+            }
+            to{
+                transform: rotate(360deg) scale(2,2);
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 20px;
+            }
+        }
+
         @keyframes cuadrado{
             0%{
                 left: 0;
@@ -73,7 +94,7 @@
 <body>
     <div class="container">
         <div class="cuadrado" id="cuadrado">
-            Hhola mundo!
+            <p> Hola mundo!</p>
         </div>
     </div>
     <script>

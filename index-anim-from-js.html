@@ -32,6 +32,27 @@
     </body>
     <script>
         const $pelota = document.getElementById('pelota');
-    
+        //$pelota.addEventListener();
+
+        //element.animate( keyframes = [], option = {} ) 
+        $pelota.animate([
+            { //from
+                transform: 'translateX(0)'
+            },
+            { //to
+                transform: 'translateX(500px)'
+            }
+        ],{
+            duration: 1000,
+            delay: 1000,
+            direction: 'normal',    //reversa o alternate o normal
+            easing: 'linear',       // ease, linear, ease in out, curva de bezier tambien
+            iterations: Infinity, //numero de iteraciones, puede ser infinito
+            fill: 'forwards',       //quede con los estilos finales  //Como quiero que se apliquen los elementos luegoque se termine la animacion
+            iterationStart: .5,    //Entre 0 y 1, osea 0.5 es el 50%
+            //endDelay: 5000, //en ms          
+        });
+
+
     </script>
 </html>

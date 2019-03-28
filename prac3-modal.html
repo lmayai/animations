@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            flex-direction: column;
+        }
+        .overlay{
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            left:0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            display: flex;
+            justify-content: center; /*ALinear horizontalmente*/
+            align-content: center; /*Alineado vertical*/
+        }
+        .modal{
+            max-width: 500px;
+            background: white;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: aniIn .8s forwards;
+            padding: 2em; /*32px*/
+            border-radius: .5em ;/*8px*/
+            text-align: center;
+        }
+
+        @keyframes aniIn{
+            0%{
+                transform: translateY(-3000px);
+            }
+            60%{
+                transform: translateY(25px);                
+            }
+            75%{
+                transform: translateY(-10px);
+            }
+            90%{
+                transform: translateY(5px);
+            } 
+        }
+
+        @keyframes aniOut{
+            100%{
+                transform: translateY(-3000px);
+            }
+            75%{
+                transform: translateY(25px);                
+            }
+            60%{
+                transform: translateY(-10px);
+            }
+            0%{
+                transform: translateY(5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="platzi.png" alt="">
+    <div class="overlay">
+        <div class="modal">
+            <h1>Atención</h1>
+            <p>Estás a punto de crear una ventana de modal increible</p>
+            <p>Te gustó?</p>
+            <div class="modal-btn">
+                <button>Si, está genial</button>
+                <button>No, I'm sorry :(</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

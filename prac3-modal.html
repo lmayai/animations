@@ -66,8 +66,11 @@
         .btn:active{
             transform: scale(0.5)
         }
-
-
+        
+        img{
+            cursor: pointer;
+        }
+        
         @keyframes modalIn{
             0%{
                 transform: translateY(-3000px);
@@ -84,23 +87,32 @@
         }
 
         @keyframes modalOut{
-            100%{
-                transform: translateY(-3000px);
-            }
-            75%{
-                transform: translateY(25px);                
+            0%{
+                transform: translateY(5px);
             }
             60%{
                 transform: translateY(-10px);
             }
+            75%{
+                transform: translateY(25px);                
+            }
+            100%{
+                transform: translateY(-3000px);
+            }
+        }
+
+        @keyframes modalNot{
             0%{
-                transform: translateY(5px);
+                transform: skew(0);
+            }
+            100%{
+                transform: skew(90deg);
             }
         }
     </style>
 </head>
 <body>
-    <img src="platzi.png" alt="">
+    <img id="show-modal" src="platzi.png" alt="">
     <div class="overlay active" id="overlay">
         <div class="modal" id="modal">
             <h1>Atención</h1>
@@ -108,24 +120,31 @@
             <p>Te gustó?</p>
             <div class="modal-btn">
                 <button class="btn primary" id="hide-modal">Si, está genial</button>
-                <button class="btn warning">No, lo siento :(</button>
+                <button class="btn warning" id="no-modal">No, lo siento :(</button>
             </div>
         </div>
     </div>
     <script>
         const $hide_btn = document.getElementById('hide-modal');
+        const $no_btn = document.getElementById('no-modal');
         const $modal = document.getElementById('modal');
         const $overlay = document.getElementById('overlay');
-    
+        const $show_modal = document.getElementById('show-modal');
+        
         $hide_btn.addEventListener('click', (event) => {
             $modal.style.animation = 'modalOut 0.8s forwards';
             $overlay.classList.remove('active') ;
         });
-        $overlay.addEventListener('click',(event)=>{
-            console.log($overlay.className)
-            //$modal.style.animation = 'modalIn 0.8s forwards';
-            //$overlay.classList.add('active');
+        $no_btn.addEventListener('click',(event) => {
+            $modal.style.animation = 'modalNot 0.5s forwards';
+            $overlay.classList.remove('active') ;
         });
+        $show_modal.addEventListener('click',(event)=>{
+            console.log($overlay.className)
+            $modal.style.animation = 'modalIn 0.8s forwards';
+            $overlay.classList.add('active');
+        });
+
 
     </script>
 </body>

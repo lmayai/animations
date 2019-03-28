@@ -34,6 +34,23 @@
             border-radius: .5em ;/*8px*/
             text-align: center;
         }
+        .btn{
+            text-align:center;
+            background: green;
+            padding: .6em .8em 0.8em;
+            border: none;
+            color:white;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: inset 0 -.2em rgba(0,0,0,.2);
+            outline:0;
+            transition: 0.2s
+        }
+        .btn:active{
+            transform: scale(0.5)
+        }
+
 
         @keyframes aniIn{
             0%{
@@ -74,8 +91,8 @@
             <p>Estás a punto de crear una ventana de modal increible</p>
             <p>Te gustó?</p>
             <div class="modal-btn">
-                <button>Si, está genial</button>
-                <button>No, I'm sorry :(</button>
+                <button class="btn">Si, está genial</button>
+                <button class="btn">No, I'm sorry :(</button>
             </div>
         </div>
     </div>

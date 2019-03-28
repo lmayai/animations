@@ -36,10 +36,10 @@
         }
         .btn{
             text-align:center;
-            background: green;
             padding: .6em .8em 0.8em;
             border: none;
             color:white;
+            background: lightgreen;
             margin: 5px;
             border-radius: 5px;
             cursor: pointer;
@@ -47,6 +47,13 @@
             outline:0;
             transition: 0.2s
         }
+        .btn.primary{
+            background: green;
+        }
+        .btn.warning{
+            background: yellowgreen;
+        }
+
         .btn:active{
             transform: scale(0.5)
         }
@@ -91,8 +98,8 @@
             <p>Estás a punto de crear una ventana de modal increible</p>
             <p>Te gustó?</p>
             <div class="modal-btn">
-                <button class="btn">Si, está genial</button>
-                <button class="btn">No, I'm sorry :(</button>
+                <button class="btn primary">Si, está genial</button>
+                <button class="btn warning">No, I'm sorry :(</button>
             </div>
         </div>
     </div>

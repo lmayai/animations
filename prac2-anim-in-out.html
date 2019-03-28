@@ -17,7 +17,7 @@
             height: 200px;
             background: #7dc900;
             /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-            animation: aniIn .8s alternate infinite;
+            animation: aniOut .8s forwards;
         }
         @keyframes aniIn{
             0%{
@@ -35,7 +35,7 @@
         }
 
         @keyframes aniOut{
-            90%{
+            100%{
                 transform: translateY(-3000px);
             }
             75%{

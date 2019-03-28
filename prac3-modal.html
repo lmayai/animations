@@ -118,11 +118,14 @@
         const $overlay = document.getElementById('overlay');
     
         $hide_btn.addEventListener('click', (event) => {
-            console.log(event);
             $modal.style.animation = 'modalOut 0.8s forwards';
             $overlay.classList.remove('active') ;
         });
-
+        $overlay.addEventListener('click',(event)=>{
+            console.log($overlay.className)
+            //$modal.style.animation = 'modalIn 0.8s forwards';
+            //$overlay.classList.add('active');
+        });
 
     </script>
 </body>

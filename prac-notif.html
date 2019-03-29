@@ -29,10 +29,43 @@
             justify-content: center;
             position: relative;
         }
+        
         .notification:before{
             content: "\f0f3";
             font-family: "Font Awesome 5 Free";
             display: block;
+        }
+        .notification.move-bell:before{
+            animation-name: bell;
+            animation-duration: 1s;
+            animation-timing-function: ease-out; /*Termina lento*/
+            transform-origin: center top;
+        }
+        @keyframes bell {
+            0%{
+                transform: rotate(35deg);
+            }   
+            12.5%{
+                transform: rotate(-30deg);
+            }
+            25%{
+                transform: rotate(25deg);
+            }
+            37.5%{
+                transform: rotate(-20deg);
+            }
+            50%{
+                transform: rotate(15deg);
+            }
+            62.5%{
+                transform: rotate(10deg);
+            }
+            75%{
+                transform: rotate(5deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
         }
         .notification:after{
             font-size: 12px;
@@ -53,6 +86,7 @@
             opacity: 0;
             transition: 0.2s;
             transform: scale(0.5);
+            will-change: opacity, transform;
         }
         .notification.show-count:after{
             opacity: 1;
@@ -77,6 +111,7 @@
         .btn:active{
             transform: scale(0.5)
         }
+        
     </style>
 </head>
 <body>
@@ -92,7 +127,12 @@
             const cont = Number(noti.getAttribute('data-count')) || 0;
             noti.classList.add('show-count');
             noti.setAttribute('data-count',cont+1);
+            noti.classList.add('move-bell');
         });
+        //Cuando acaba la notificacion se debe eliminar la clase
+        noti.addEventListener('animationend',()=>{
+            noti.classList.remove('move-bell');
+        })
     </script>
 </body> 
 </html>

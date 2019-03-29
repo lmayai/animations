@@ -16,7 +16,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /*Los elementos por fuera del contenedor se oculten*/
+           
         }
         .content{
             font-family: Arial, Helvetica, sans-serif;
@@ -24,27 +24,47 @@
             text-align: center;
             font-size: 2em;
         }
-        .circulo{
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, .5);
+        .waves{
             position: absolute;
-            animation: wave 5s infinite alternate;
+            bottom: -135px;
+            height: 527px;
+            width: 100%;
+            overflow: hidden; /*Los elementos por fuera del contenedor se oculten*/
+            /* left: 0;
+            right: 0;
+            bottom:0;
+            height: 200px; */
+        }
+        .wave{
+            /*Imagen tiene 2402 ancho*1281 alto*/
+            bottom: 0;
+            left: -180px;
+            width: 2402px;
+            height: 427px; /**/
+            background: url('waves.png') center no-repeat;
+            position: absolute;
+            animation: wave 5s ease-in-out infinite alternate;
         }  
-        .circulo.b{
+        .wave.a{
+            background-position: 0 -854px;
+        }
+        .wave.b{
             animation-delay: 1s;
+            background-position: 0 -427px;
         }   
-        .circulo.c{
+        .wave.c{
             animation-delay: 2s;
-
+            background-position: 0 0px;
         }
         @keyframes wave{
             0%{
                 transform: translateX(0) translateY(0);
             }
+            50%{
+                transform: translate(-80px,30px)
+            }
             100%{
-                transform: translateX(200px) translateY(100px);
+                transform: translateX(160px) translateY(-60px);
             }
         }
     </style>
@@ -55,9 +75,11 @@
             <h1>MIRA LAS OLAS</h1>
             <p>Esto es un efecto de la animaciones de CSS</p>
         </div>
-        <div class="circulo a"></div>
-        <div class="circulo b"></div>
-        <div class="circulo c"></div>
+        <div class="waves">
+            <div class="wave a"></div>
+            <div class="wave b"></div>
+            <div class="wave c"></div>
+        </div>
     </div>
     
     <script>

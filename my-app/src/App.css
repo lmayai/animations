@@ -4,7 +4,7 @@
 
 .App-logo {
   /* animation: App-logo-spin,fade infinite 20s linear; */
-  animation: fade infinite 1s linear;
+  /* animation: fade infinite 1s linear; */
   height: 40vmin;
   pointer-events: none;
 }
@@ -60,22 +60,24 @@
 
 /*Estado inicial de entrada*/
 .fade-enter{
-  background: red;
+  /* background: red; */
+  animation: fade 1s;
 }
 
 /*estado final de entrada*/
 .fade-enter-active{
-  background: blue;
-  transition-duration:1s;
+  /* background: blue;
+  transition-duration:1s; */
 }
 
 /*Estado inicial de salida*/
 .fade-leave{
-  transform: translateY(0);
-}
+  /* transform: translateY(0); */
+  animation: fade 1s;
+} 
 
 /*Estado final de salida*/
 .fade-leave-active{
-  transition-duration:1s;
-  transform: translateY(500px);
+  /* transition-duration:1s;
+  transform: translateY(500px); */
 }

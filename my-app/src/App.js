@@ -12,7 +12,7 @@ class App extends Component {
   onClick(){
     this.setState({
       logo:logoPlatzi,
-    })
+    }) 
   }
   render() {
     return (

@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import acustica from '../images/invie-acustica.png'
+import acustica2 from '../images/invie-acustica2x.png'
+import classic from '../images/invie-classic.png'
+import classic2 from '../images/invie-classic2x.png'
 
 class Guitarras extends Component {
   render() {
@@ -14,7 +18,7 @@ class Guitarras extends Component {
       </div>
        {/* <video src="video/320x240.ogg"></video> */}
       <article className="guitarra">
-        <img className="derecha" data-src="images/invie-acustica.png|images/invie-acustica2x.png"  alt="Guitarra Invie Acustica" width="350"/>
+        <img className="derecha" src={acustica}   /*data-src={acustica||acustica2}*/  alt="Guitarra Invie Acustica" width="350"/>
         <div className="contenedor-guitarra-a">
           <h3 className="title-b">Invie Acustica</h3>
           <ol>
@@ -25,7 +29,7 @@ class Guitarras extends Component {
         </div>
       </article>
       <article className="guitarra b"> 
-        <img className="izquierda" data-src="images/invie-classic.png|images/invie-classic2x.png" alt="Guitarra Invie Classic" width="350"/>
+        <img className="izquierda" src={classic} /*data-src={classic||classic2}*/ alt="Guitarra Invie Classic" width="350"/>
         <div className="contenedor-guitarra-b">
           <h3 className="title-b">Invie Classic</h3>
           <ol>

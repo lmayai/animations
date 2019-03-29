@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import logo from '../images/invie.png'
+import logo2 from '../images/invie2x.png'
 
 class Portada extends Component {
   render() {
@@ -6,7 +8,7 @@ class Portada extends Component {
       <section id="portada" className="portada background">
       <header id="header" className="header contenedor"> 
         <figure className="logotipo"> 
-          <img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie logotipo"/>
+          <img src={logo} srcset={logo||logo2} width="186" height="60" alt="Invie logotipo"/>
         </figure>
         <span className="burguer-button icon-menu" id="burguer-button"></span>
         <nav className="menu" id="menu"> 

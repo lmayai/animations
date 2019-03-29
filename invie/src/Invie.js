@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './css/invie.css';
 import Portada from './components/Portada.jsx'
 import Guitarras from './components/Guitarras.jsx'

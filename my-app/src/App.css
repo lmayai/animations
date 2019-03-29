@@ -3,7 +3,8 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  /* animation: App-logo-spin,fade infinite 20s linear; */
+  animation: fade infinite 1s linear;
   height: 40vmin;
   pointer-events: none;
 }
@@ -23,11 +24,58 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+} */
+
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 1;
+  }
+  90%{ 
+    opacity: 0;
+  }
+  100%{ 
+    opacity: 1;
+  }
+}
+
+.fade{
+
+}
+
+/*Estado inicial de entrada*/
+.fade-enter{
+  background: red;
+}
+
+/*estado final de entrada*/
+.fade-enter-active{
+  background: blue;
+  transition-duration:1s;
+}
+
+/*Estado inicial de salida*/
+.fade-leave{
+  transform: translateY(0);
+}
+
+/*Estado final de salida*/
+.fade-leave-active{
+  transition-duration:1s;
+  transform: translateY(500px);
 }

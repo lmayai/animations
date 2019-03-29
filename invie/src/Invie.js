@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './css/invie.css';
 import Portada from './components/Portada.jsx'
+import Guitarras from './components/Guitarras.jsx'
+import Footer from './components/Footer.jsx'
 
 class Invie extends Component {
   render() {
@@ -9,7 +11,11 @@ class Invie extends Component {
       <section className="Invie">
         <Portada />
         {/*PORTADA*/}
+
+        <Guitarras />
         {/*GUITARRAS*/}
+        
+        <Footer />
         {/*FOOTER*/}
       </section>
     );

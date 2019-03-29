@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './Invie.css';
+import './css/invie.css';
 import Portada from './components/Portada.jsx'
 
 class Invie extends Component {

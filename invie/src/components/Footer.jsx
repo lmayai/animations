@@ -12,35 +12,35 @@ class Footer extends Component {
         </div>
         <form className="formulario">
           <div className="col1">
-            <label for="nombre">Nombre</label>
+            <label htmlFor="nombre">Nombre</label>
             <input type="text" required id="nombre" name="nombre"/>
-            <label for="email">E-mail</label>
+            <label htmlFor="email">E-mail</label>
             <input type="email" required id="email" name="email"/>
             <div className="sexo">
-              <label for="mujer">
-                <input type="radio" id="mujer" checked name="sexo" value="mujer"/> mujer
+              <label htmlFor="mujer">
+                <input type="radio" id="mujer" defaultChecked name="sexo" value="mujer"/> mujer
               </label>
-              <label for="hombre">
+              <label htmlFor="hombre">
                 <input type="radio" id="hombre" name="sexo" value="hombre"/> hombre
               </label>
             </div>
             <div className="intereses">
-              <label for="cotizacion">
-                <input type="checkbox" checked id="cotizacion" name="intereses" value="cotizacion"/> Cotización
+              <label htmlFor="cotizacion">
+                <input type="checkbox" defaultChecked id="cotizacion" name="intereses" value="cotizacion"/> Cotización
               </label>
-              <label for="reclamos">
+              <label htmlFor="reclamos">
                 <input type="checkbox" id="reclamos" name="intereses" value="reclamos"/> Reclamos
               </label>
-              <label for="comentarios">
+              <label htmlFor="comentarios">
                 <input type="checkbox" id="comentarios" name="intereses" value="comantarios"/> Comentarios
               </label>
-              <label for="otros">
+              <label htmlFor="otros">
                 <input type="checkbox" id="otros" name="intereses" value="otros"/> Otros
               </label>
             </div>
           </div>
           <div className="col2">
-            <label for="comentarios">Comentarios</label>
+            <label htmlFor="comentarios">Comentarios</label>
             <textarea name="comantarios" id="comentarios" cols="30" rows="7"></textarea>
             <input type="submit" value="Enviar" className="button"/>
           </div>

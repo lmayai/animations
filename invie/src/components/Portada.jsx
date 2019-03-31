@@ -4,6 +4,20 @@ import logo2 from '../images/invie2x.png'
 
 class Portada extends Component {
   render() {
+    const menu = [
+      {
+        href: 'index.html',
+        title:'Home',
+      },
+      {
+        href: '#guitarras',
+        title: 'Guitarras'
+      },
+      {
+        href:'precios.html',
+        title:'Precios'
+      }
+    ]
     return (
       <section id="portada" className="portada background">
       <header id="header" className="header contenedor"> 
@@ -13,15 +27,13 @@ class Portada extends Component {
         <span className="burguer-button icon-menu" id="burguer-button"></span>
         <nav className="menu" id="menu"> 
           <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="#guitarras">Guitarras</a>
-            </li>
-            <li>
-              <a href="precios.html">Precios</a>
-            </li>
+            {menu.map( (item) => {
+              return(
+                <li>
+                  <a href={item.href}>{item.title}</a>
+                </li>
+              )
+            })}
           </ul>
         </nav>
       </header>

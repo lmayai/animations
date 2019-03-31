@@ -21,9 +21,9 @@ class Guitarras extends Component {
       this.props.guitarras.map( (guitarra, index) => {
         return (
         <article className="guitarra" key={index}>
-          <img className={guitarra.imgClass} src={guitarra.image}   /*data-src={acustica||acustica2}*/  alt={guitarra.alt} width="350"/>
-          <div className={guitarra.container}>
-            <h3 className="title-b">{guitarra.name}</h3>
+          <img className="guitarra-img" src={guitarra.image}   /*data-src={acustica||acustica2}*/  alt={guitarra.alt} width="350"/>
+          <div className="guitarra-container">
+            <h3 className="guitarra-title">{guitarra.name}</h3>
             <ol>
               {guitarra.features.map( (feature , index)=>{
                 return(

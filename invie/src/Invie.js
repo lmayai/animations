@@ -31,8 +31,6 @@ const data = {
       image: acustica,
       alt: 'Guitarra Invie Acustica',
       name:'Invie Acustica',
-      imgClass:'derecha',
-      container:'contenedor-guitarra-a',
       features:[
         'Estilo vintage',
         'Madera pura',
@@ -43,8 +41,6 @@ const data = {
       image: classic,
       alt: 'Guitarra Invie Classic',
       name:'Invie Classic',
-      imgClass:'izquierda',
-      container:'contenedor-guitarra-b',
       features:[
         'Estilo vintage',
         'Liviana',

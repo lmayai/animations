@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 import acustica2 from '../images/invie-acustica2x.png'
-
 import classic2 from '../images/invie-classic2x.png'
+
+function mapStateToProps(state){
+  return{
+    guitarras:state.guitarras,
+  }
+}
 
 class Guitarras extends Component {
   render() {
@@ -43,4 +49,4 @@ class Guitarras extends Component {
   }
 }
 
-export default Guitarras;
+export default connect(mapStateToProps)(Guitarras);

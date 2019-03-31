@@ -5,7 +5,7 @@ import Guitarras from './components/Guitarras.jsx'
 import Footer from './components/Footer.jsx'
 
 
-
+/*
 const data = {
   menu : [
     {
@@ -48,20 +48,22 @@ const data = {
   ]
 
 }
-
+*/
 
 class Invie extends Component {
   render() {
     return (
       <section className="Invie">
-        <Portada menu={data.menu} logo={data.logoPortada} />
         {/*PORTADA*/}
+        {/* <Portada menu={data.menu} logo={data.logoPortada} /> */}
+        <Portada />
 
-        <Guitarras guitarras={data.guitarras} />
         {/*GUITARRAS*/}
+        {/* <Guitarras guitarras={data.guitarras} /> */}
+        <Guitarras />
         
-        <Footer />
         {/*FOOTER*/}
+        <Footer />
       </section>
     );
   }

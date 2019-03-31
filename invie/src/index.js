@@ -71,11 +71,20 @@ var initialState = data;
 
 const store = createStore(reducer, initialState);
 
+const easter ={
+    menu : [
+        {
+          href: 'index.html',
+          title:'Home',
+        },
+    ]
+}
+
 cheet('i n v i e', ()=> {
     store.dispatch({
         type: 'UPDATE_PROPS',
         payload: {
-            props: {}
+            props: easter
         }
     });
     console.log('Descubriste el easter egg');

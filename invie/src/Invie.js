@@ -4,26 +4,32 @@ import Portada from './components/Portada.jsx'
 import Guitarras from './components/Guitarras.jsx'
 import Footer from './components/Footer.jsx'
 
-const menu = [
-  {
-    href: 'index.html',
-    title:'Home',
-  },
-  {
-    href: '#guitarras',
-    title: 'Guitarras'
-  },
-  {
-    href:'precios.html',
-    title:'Precios'
-  }
-]
+import logoPortada from './images/invie.png'
+
+const data = {
+  menu : [
+    {
+      href: 'index.html',
+      title:'Home',
+    },
+    {
+      href: '#guitarras',
+      title: 'Guitarras'
+    },
+    {
+      href:'precios.html',
+      title:'Precios'
+    }
+  ],
+  logoPortada:logoPortada
+}
+
 
 class Invie extends Component {
   render() {
     return (
       <section className="Invie">
-        <Portada menu={menu}/>
+        <Portada menu={data.menu} logo={data.logoPortada} />
         {/*PORTADA*/}
 
         <Guitarras />

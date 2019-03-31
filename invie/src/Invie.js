@@ -14,6 +14,10 @@ cheet('i n v i e', ()=> {
   console.log('Descubriste el easter egg');
 })
 
+cheet('b a c k', ()=> {
+  console.log('Regreso al estado inicial');
+})
+
 const data = {
   menu : [
     {

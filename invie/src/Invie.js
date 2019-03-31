@@ -4,19 +4,7 @@ import Portada from './components/Portada.jsx'
 import Guitarras from './components/Guitarras.jsx'
 import Footer from './components/Footer.jsx'
 
-import logoPortada from './images/invie.png'
-import acustica from './images/invie-acustica.png'
-import classic from './images/invie-classic.png'
 
-import cheet from "cheet.js";
-
-cheet('i n v i e', ()=> {
-  console.log('Descubriste el easter egg');
-})
-
-cheet('b a c k', ()=> {
-  console.log('Regreso al estado inicial');
-})
 
 const data = {
   menu : [

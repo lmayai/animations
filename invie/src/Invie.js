@@ -5,6 +5,8 @@ import Guitarras from './components/Guitarras.jsx'
 import Footer from './components/Footer.jsx'
 
 import logoPortada from './images/invie.png'
+import acustica from './images/invie-acustica.png'
+import classic from './images/invie-classic.png'
 
 const data = {
   menu : [
@@ -21,7 +23,36 @@ const data = {
       title:'Precios'
     }
   ],
-  logoPortada:logoPortada
+  
+  logoPortada:logoPortada,
+
+  guitarras: [
+    {
+      image: acustica,
+      alt: 'Guitarra Invie Acustica',
+      name:'Invie Acustica',
+      imgClass:'derecha',
+      container:'contenedor-guitarra-a',
+      features:[
+        'Estilo vintage',
+        'Madera pura',
+        'Incluye estuche invisible de aluminio'
+      ]
+    },
+    {
+      image: classic,
+      alt: 'Guitarra Invie Classic',
+      name:'Invie Classic',
+      imgClass:'izquierda',
+      container:'contenedor-guitarra-b',
+      features:[
+        'Estilo vintage',
+        'Liviana',
+        'Inicia tu camino como Rockstar'
+      ]
+    }
+  ]
+
 }
 
 
@@ -32,7 +63,7 @@ class Invie extends Component {
         <Portada menu={data.menu} logo={data.logoPortada} />
         {/*PORTADA*/}
 
-        <Guitarras />
+        <Guitarras guitarras={data.guitarras} />
         {/*GUITARRAS*/}
         
         <Footer />

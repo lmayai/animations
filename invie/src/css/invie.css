@@ -201,17 +201,38 @@ input:focus, textarea:focus {
 
 
 .guitarra {
-  margin: 10px 10px 40px 10px;
-  padding: 10px;
+  margin: 10px 0 40px 10px;
+  padding: 10px 2em;
   /*overflow: hidden;*/
   border: 1px solid #1F313C;
-  border-radius: 8px;
+  border-radius: 3px;
   display: flex;
   align-items: center;
+  min-height: 250px ;
+  transition: .3s;
+  position: relative;
 }
+
+.guitarra:hover{
+  /* box-shadow: x y % color; */
+  box-shadow: 10px 10px 0 rgb(133, 72, 72);
+}
+
+.guitarra:nth-of-type(even):hover{
+  box-shadow: -10px 10px 0 rgb(58, 31, 31);
+}
+
+.guitarra-title {
+  font-size: 2.5em;
+  margin: 0 0 .2em;
+  border-bottom: 2px dashed #1e212d;
+  padding-bottom: .2em;
+}
+
 .guitarra-img{
   position: absolute;
   right:0;
+  bottom: 0;
 }
 
 .guitarra ol {

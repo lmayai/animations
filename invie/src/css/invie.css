@@ -225,16 +225,12 @@ input:focus, textarea:focus {
   content: counter(features) ". ";
 }
 
-
-.contenedor-guitarra-a {
-  padding-left: 20px;
+.guitarra:nth-of-type(even){
+  justify-content: flex-end;
 }
-
-.contenedor-guitarra-b {
-  margin-left: 370px;
-  position: relative;
-  bottom: 90px;
-
+.guitarra:nth-of-type(even) .guitarra-img{
+  right: initial;
+  left: 0;
 }
 
 .header {

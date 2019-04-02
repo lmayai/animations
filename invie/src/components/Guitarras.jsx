@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import CSSTransitionGroup from 'react-addons-css-transition-group'
+import '../css/invie.css'
+import '../css/animations.css'
 
 import acustica2 from '../images/invie-acustica2x.png'
 import classic2 from '../images/invie-classic2x.png'
@@ -27,7 +30,19 @@ class Guitarras extends Component {
       this.props.guitarras.map( (guitarra, index) => {
         return (
         <article className="guitarra" key={index}>
-          <img className="guitarra-img" src={guitarra.image}   /*data-src={acustica||acustica2}*/  alt={guitarra.alt} width="350"/>
+          <CSSTransitionGroup
+            transitionName="flicker"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+          >
+            <img 
+              className="guitarra-img" 
+              key={guitarra.image} 
+              src={guitarra.image}   
+              /*data-src={acustica||acustica2}*/  
+              alt={guitarra.alt} 
+              width="350"/>
+          </CSSTransitionGroup>
           <div className="guitarra-container">
             <h3 className="guitarra-title">{guitarra.name}</h3>
             <ol>

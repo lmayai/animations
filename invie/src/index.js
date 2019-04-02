@@ -9,6 +9,9 @@ import acustica from './images/invie-acustica.png'
 import classic from './images/invie-classic.png'
 import cheet from "cheet.js";
 
+import imgEasterA from './images/easter-a.png'
+import imgEasterB from './images/easter-b.png'
+
 import { Provider } from 'react-redux'
 import { createStore } from 'redux';
 
@@ -31,27 +34,27 @@ const data = {
     logoPortada:logoPortada,
   
     guitarras: [
-      {
-        image: acustica,
-        alt: 'Guitarra Invie Acustica',
-        name:'Invie Acustica',
-        features:[
-          'Estilo vintage',
-          'Madera pura',
-          'Incluye estuche invisible de aluminio'
-        ]
-      },
-      {
-        image: classic,
-        alt: 'Guitarra Invie Classic',
-        name:'Invie Classic',
-        features:[
-          'Estilo vintage',
-          'Liviana',
-          'Inicia tu camino como Rockstar'
-        ]
-      }
-    ]
+        {
+          image: acustica,
+          alt: 'Guitarra Invie Acustica',
+          name:'Invie Acustica',
+          features:[
+            'Estilo vintage',
+            'Madera pura',
+            'Incluye estuche invisible de aluminio'
+          ]
+        },
+        {
+          image: classic,
+          alt: 'Guitarra Invie Classic',
+          name:'Invie Classic',
+          features:[
+            'Estilo vintage',
+            'Liviana',
+            'Inicia tu camino como Rockstar'
+          ]
+        }
+      ]
   
 }
 
@@ -77,7 +80,30 @@ const easter ={
           href: 'index.html',
           title:'Home',
         },
-    ]
+    ],
+    guitarras: [
+        {
+          image: imgEasterA,
+          alt: 'Guitarra Padre de familia',
+          name:'Invie Familiar',
+          features:[
+            'Copia de los Simpsons',
+            'Aire puro',
+            'Chistes malos'
+          ]
+        },
+        {
+          image: imgEasterB,
+          alt: 'Guitarra Invie Classic',
+          name:'Invie Classic',
+          features:[
+            'Estilo vintage',
+            'Liviana',
+            'Inicia tu camino como Rockstar'
+          ]
+        }
+      ]
+    
 }
 
 cheet('i n v i e', ()=> {

@@ -35,24 +35,33 @@ class Guitarras extends Component {
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}
           >
-            <img 
-              className="guitarra-img" 
+          <img 
+            className="guitarra-img" 
               key={guitarra.image} 
               src={guitarra.image}   
               /*data-src={acustica||acustica2}*/  
               alt={guitarra.alt} 
               width="350"/>
           </CSSTransitionGroup>
-          <div className="guitarra-container">
-            <h3 className="guitarra-title">{guitarra.name}</h3>
-            <ol>
-              {guitarra.features.map( (feature , index)=>{
-                return(
-                  <li key={index}>{feature}</li>
-                )
-              })}
-            </ol>
-          </div>
+          <CSSTransitionGroup
+            transitionName = "fade"
+            transitionEnterTimeout = {300} /*Tiempo en que la ani sera borrada del dom*/
+            transitionLeaveTimeout = {300} /* */
+            transitionLeave = {false} /*SI se quiere que no se ejecute una animacion*/
+          >
+            <div 
+              className="guitarra-container" 
+              key={guitarra.name}>
+              <h3 className="guitarra-title">{guitarra.name}</h3>
+              <ol>
+                {guitarra.features.map( (feature , index)=>{
+                  return(
+                    <li key={index}>{feature}</li>
+                    )
+                  })}
+              </ol>
+            </div>
+          </CSSTransitionGroup>
         </article>
         )
       })

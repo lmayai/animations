@@ -17,7 +17,8 @@ function mapStateToProps(state) {
 class Portada extends Component {
   render() {
     return (
-      <section id="portada" className="portada background">
+      //Es posible agregar calses dentro de un elemento o tag del siguiente modo. Lo que se agrega viene de redux
+      <section id="portada" className={`portada background ${this.props.isAnimated}`}>
       <header id="header" className="header contenedor"> 
         <figure className="logotipo"> 
           <img src={this.props.logo} srcset={this.props.logo||logo2} width="186" height="60" alt="Invie logotipo"/>

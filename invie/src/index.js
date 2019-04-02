@@ -16,6 +16,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux';
 
 const data = {
+    isAnimated:false,
     menu : [
       {
         href: 'index.html',
@@ -75,6 +76,7 @@ var initialState = data;
 const store = createStore(reducer, initialState);
 
 const easter ={
+    isAnimated:'is-animated',
     menu : [
         {
           href: 'index.html',

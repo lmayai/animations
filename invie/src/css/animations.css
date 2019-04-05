@@ -230,6 +230,8 @@
     /*EL elemento tiene 29 etapas, con 100pxde alto y 2900 de ancho -
     Por tal son 2900 de largo / 29 pasos = Darian pasos de a 100px
     */
+    bottom: -100px; /*Se oculta minetras arranca*/
+    position: fixed;
   }
   .like.is-liked{
     animation-name: like,move;

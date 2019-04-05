@@ -17,11 +17,12 @@ function mapStateToProps(state) {
 
 class Portada extends Component {
   renderHeart(){
-    const hearts = new Array(10).fill({})
+    const hearts = new Array(100).fill({})
     return(
       hearts.map( (element,index)=>{
         const style ={
-          left: Math.floor(Math.random()*(window.innerWidth-0)) + "px" 
+          left: Math.floor(Math.random()*(window.innerWidth-0)) + "px", 
+          animationDelay: Math.floor(Math.random()*(5000-0)) + "ms"          
         }
         return (
           <Heart key={index} style={style} />

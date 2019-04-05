@@ -21,7 +21,7 @@ class Portada extends Component {
     return(
       hearts.map( (element,index)=>{
         const style ={
-          left: index*50 + "px" 
+          left: Math.floor(Math.random()*(window.innerWidth-0)) + "px" 
         }
         return (
           <Heart key={index} style={style} />

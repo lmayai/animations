@@ -232,11 +232,11 @@
     */
   }
   .like.is-liked{
-    animation-name: like;
-    animation-duration: 1s;
-    animation-timing-function: steps(28);
+    animation-name: like,move;
+    animation-duration: 1s,3s;
+    animation-timing-function: steps(28),linear;
     animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite, 1;
   }
   
   @keyframes like{
@@ -249,3 +249,13 @@
     }
   }
   
+@keyframes move {
+    0%{
+        position: absolute;
+        bottom: 0;
+    }
+    100%{
+        position: absolute;
+        bottom: 110%; /*Pa que se salgan*/
+    }
+}

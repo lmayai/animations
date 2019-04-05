@@ -16,6 +16,20 @@ function mapStateToProps(state) {
 
 
 class Portada extends Component {
+  renderHeart(){
+    const hearts = new Array(10).fill({})
+    return(
+      hearts.map( (element,index)=>{
+        const style ={
+          left: index*50 + "px" 
+        }
+        return (
+          <Heart key={index} style={style} />
+        )
+      })
+    )
+  }
+
   render() {
     return (
       //Es posible agregar calses dentro de un elemento o tag del siguiente modo. Lo que se agrega viene de redux
@@ -53,7 +67,7 @@ class Portada extends Component {
         </CSSTransitionGroup>
         {
           this.props.isAnimated &&
-          <Heart />
+          this.renderHeart()
         }
     </section>
     )

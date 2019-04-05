@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import CSSTransitionGroup from 'react-addons-css-transition-group'
 
 import logo2 from '../images/invie2x.png'
+import Heart from './Heart.jsx';
 
 //Que datos quiero de mi store
 function mapStateToProps(state) {
@@ -50,6 +51,10 @@ class Portada extends Component {
             </div>
           }
         </CSSTransitionGroup>
+        {
+          this.props.isAnimated &&
+          <Heart />
+        }
     </section>
     )
   }
